@@ -1,0 +1,85 @@
+.gallery
+    padding: 0
+    [class*="photo-"]
+        border: 15px solid white
+        border-bottom: none
+        padding: 0
+        span
+            opacity: 0
+            transition: opacity, .5s
+            position: absolute
+            right: 15px
+            top: 15px
+            background-color: white
+            color: $special-grey
+            padding: 10px
+            border-radius: 5px
+        &:hover 
+            span
+                opacity: 1
+                &:hover
+                    cursor: pointer
+                    @include transform(1.2)
+                    background-color: $special-grey
+                    color: white
+                    border: 1px solid white
+                    font-weight: bold
+        &:nth-child(1),
+        &:nth-child(4)
+            border-left: none
+        h3
+            position: absolute
+            top: 70%
+            left: 10%
+            color: white
+
+//MODAL - MODIFICATIONS
+.gallery
+    .modal
+        [class*="modal-content-custom-"]
+            background-position: center
+            background-size: cover
+            .modal-header
+                h2
+                    color: white
+            .modal-body
+                .media
+                    .media-body
+                        p
+                            padding: 20px
+                            background-color: rgba(111, 144, 184, 0.5)
+                            border-radius: 15px
+                            color: white
+            .modal-footer
+                button
+                    background-color: white
+                    color: $special-grey
+                    padding: 10px
+                    border-radius: 5px
+                    &:hover
+                        cursor: pointer
+                        @include transform(1.2)
+                        background-color: $special-grey
+                        color: white
+                        border: 1px solid white
+                        font-weight: bold
+
+
+
+@for $i from 1 through 6
+    .modal-content-custom-#{$i}
+        background-image: url("images/gallery/gallery-#{$i}.png") 
+
+@media (max-width: 767px)
+    .gallery
+        [class*="photo-"]      
+            img
+                width: 100%
+
+@media (max-width: 991px)
+    .gallery
+        [class*="photo-"]
+            border: none
+            border-top: 10px white solid
+            span
+                opacity: 1

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700')
+
+*
+    box-sizing: border-box
+
+body
+    background-color: #ccc
+
+h1
+    @extend %header-basic  
+    font-size: 55px
+
+h2
+    @extend %header-basic  
+    font-size: 35px
+
+h3
+    @extend %header-basic  
+    font-size: 20px
+
+p   
+    font-size: 15px
+    font-weight: 300
+    font-family: 'Lato', sans-serif
+    color: $special-grey
+    letter-spacing: 1px
+
+.container-custom
+    width: 100%
+    max-width: 1200px
+    margin: 0
+    display: flex
+    margin: auto
+    flex-wrap: wrap
+    flex-direction: column
+    background-color: white
+    overflow: hidden

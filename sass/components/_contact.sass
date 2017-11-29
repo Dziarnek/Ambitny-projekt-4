@@ -1,0 +1,31 @@
+.contact
+    @extend %border-container
+    h2
+    .border-div
+        p
+        button
+            @extend p
+            border: 1px solid black
+            background-color: $special-grey
+            color: white
+            text-transform: uppercase
+            padding: 10px
+            margin-top: 20px
+            width: 300px
+            &:hover
+                @include transform(1.1)
+                background-color: rgba(60, 60, 60, 0.8)
+        .contact-info
+            .phone,
+            .e-mail,
+            .adress
+                @extend %border-container-small
+            .phone
+                h3
+                    top: 35%
+            .e-mail
+                h3
+                    top: 52.5%
+            .adress
+                h3
+                    top: 70.5%
