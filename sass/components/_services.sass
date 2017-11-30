@@ -1,0 +1,45 @@
+.services
+    background-image: url("images/hero/hero-2.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    padding:
+        bottom: 50px
+        top: 50px
+    margin: auto
+            height: 100%
+    .box-insd 
+        border: 2px solid white
+        border-top: none
+        .box-title 
+            text-align: center
+            transform: translateY(-50%)	
+            span 
+                display: inline-block
+                width: 100%
+                max-width: 90%	
+                color: white		
+            &::before 
+                content: ""
+                height: 2px
+                width: 25%
+                position: absolute
+                top: 0
+                bottom: 0
+                left: -2px
+                margin: auto
+                background-color: white			
+            &::after 
+                content: ""
+                height: 2px
+                width: 25%
+                position: absolute
+                top: 0
+                bottom: 0
+                right: -2px
+                margin: auto   
+                background-color: white
+        p
+            color: white	
+            padding: 20px 50px
+            text-align: center	
